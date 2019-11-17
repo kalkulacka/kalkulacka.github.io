@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.content {
+    width: 40%;
+    min-width: 768px; /* TODO */
+    max-width: 1400px; /* TODO */
+    margin: 0 auto;
+}
+
+.content p {
+    width: 100%;
+}
+
+.wage, .expense {
+    float: left;
+    width: 49%;
+    margin: 0.5%;
+    padding: 0.25em 0.75em;
+}
+
+.expense {
+    font-weight: bolder;
+    font-size: 0.8em;
+}
+
+.rent {
+    /*border: 3px solid #c9aa88;*/
+    background-color: #755;
+}
+
+.cleaner {
+    clear: both;
+}
+
+.expense, .expense * {
+    box-sizing: border-box;
+    outline: none;
+}
+
+.expense input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.expense input[type=number]::-webkit-inner-spin-button,
+.expense input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.expense button {
+    -webkit-appearance: none;
+    background: #1b69bf;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.expense input[type=number] {
+    padding: 0;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    max-width: 50px;
+    height: 25px;
+}
+
+.expense select {
+    max-width: 80px;
+    margin-left: 0.5em;
+}
+
+.wage {
+    background: #1b69bf;
+    color: #fff;
+    width: 99%;
+    margin: 0.5%;
+    font-size: 120%;
+    text-align: center;
+}
+
+.wage input {
+    border: none;
+    background: none;
+    color: #fff;
+    border-bottom: 1px solid #fff !important;
+    text-align: center;
+    width: 25%;
+    min-width: 150px;
+    font-size: 120%;
+}
+
+.expense {
+    background: #e8f0f8;
+}
+
+.expense table {
+    width: 100%;
+}
+
+.expense table td:first-child {
+    width: auto;
+}
+
+.expense table td:nth-child(2) {
+    width: 110px;
+}
+
+.expense table td:nth-child(3) {
+    width: 30px;
+}
+
+.results {
+}
+
+table.result {
+    width:48%;
+    margin: 1%;
+    float: left;
+    border: none;
+    border-collapse: collapse;
+}
+
+table.result td {
+    padding: 1em;
+}
+
+table.result tr:first-child {
+    text-align: center;
+    background: #e8f0f8;
+    font-size: 175%;
+    font-weight: bolder;
+}
+
+table.result tr:nth-child(2) {
+    text-align: center;
+    background: #1b69bf;
+    color: #fff;
+}
+
+table.result tr:nth-child(3) {
+    background: #0d4f98;
+    color: #fff;
+}
+
+table.result td span {
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.progress div {
+    background: #fa824c;
+    height: 12px;
+}
+
+h2 {
+    margin-top: 2em;
+}
+
+.footer {
+    margin-top: 1.5em;
+    padding: 1em 0;
+    border-top: 2px solid #ccc;
+}
+
+.footer, .footer a {
+    color: #aaa;
+}
+
+/* Responsive web (TODO) */
+
+@media screen and (max-width: 1200px) {
+    .content {
+        min-width: 0;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content {
+        min-width: 0;
+        width: 90%;
+    }
+
+    .wage, .expense, table.result {
+        float: none;
+        width: 100%;
+    }
+}

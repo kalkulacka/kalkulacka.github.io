@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Příliš mnoho příkras. Vyzkoušejte si opravenou kalkulačku!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <div class="content">
+    <h1>Příliš mnoho příkras. Vyzkoušejte si opravenou kalkulačku!</h1>
+    <p><em>&bdquo;Za komunismu se žilo lépe, všechno bylo levnější &ndash; to je asi nejčastější argument zastánců doby před rokem 1989&ldquo;</em>. <a href="https://zpravy.aktualne.cz/ekonomika/meli-jsme-se-za-komunistu-lepe-velke-porovnani-vydaju-cechu/r~6d90e3aef63d11e9b259ac1f6b220ee8/">Kalkulačka na Aktuálně.cz</a> se proto snaží ukázat, že se nám žije lépe v kapitalismu, jelikož si za své peníze můžeme koupit více spotřebního zboží.</p>
+    <p>Má to ale jeden háček: Do kalkulačky se nevešly další aspekty života v novém režimu, například raketový růst ceny bydlení, zadlužení domácností či nerovnosti v distribuci majetku. Rozhodli jsme se proto kalkulačku lehce poopravit a <b>zahrnout cenu nájemního bydlení</b>.</p>
+    <p>Je také třeba mít na paměti, že na průměrnou mzdu, na jejímž základě jsou změny cen počítány, dnes <a href="https://www.irozhlas.cz/ekonomika/kolik-je-prumerna-mzda-2019-cr-32-tisic-korun-cesky-statisticky-urad_1906041322_ako">dvě třetiny pracujících nedosáhnou</a>. Do kalkulačky také nejsou zahrnuty další náklady, jako například <a href="https://www.novinky.cz/ekonomika/clanek/zadluzeni-cechu-dal-roste-na-jednoho-pripada-218-tisic-40274348">zadlužení domácností</a> &ndash; průměrná měsíční splátka v roce 2018 byla 7565&nbsp;Kč.</p>
+
+    <h2>Spočítejte si, kolik stál nákup před 30 lety a nyní</h2>
+    <p>Zatímco loni podle dat českých statistiků dosahovala průměrná mzda částky 31885&nbsp;Kč, v roce 1989 to bylo 3170&nbsp;Kčs. Výběr a množství potravin v nákupním košíku i současnou výši mzdy si v kalkulačce můžete změnit dle vlastní potřeby a zjistit tak, jaký podíl svého platu vydáte na běžný nákup vy.</p>
+    <div class="calculator">
+      <div class="wage">
+        Zadejte výši své mzdy: 
+        <input class="quantity" min="0" value="31885" type="number" step="500" name="mzda">
+        Kč
+      </div><div class="expense rent">
+        <table><tr><td>Nájem v
+<select name="city"><option value="praha">Praze</option>
+  <option value="cb">Českých Budějovicích</option>
+  <option value="brno">Brně</option>
+  <option value="kv">Karlových Varech</option>
+  <option value="hk">Hradci Králové</option>
+  <option value="liberec">Liberci</option>
+  <option value="ostrava">Ostravě</option>
+  <option value="olomouc">Olomouci</option>
+  <option value="pardubice">Pardubicích</option>
+  <option value="plzen">Plzni</option>
+  <option value="unl">Ústí nad Labem</option>
+  <option value="jihlava">Jihlavě</option>
+  <option value="zlin">Zlíně</option>
+</select></td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="60" type="number" step="10" name="najem"><button class="plus">+</button></div></td>
+        <td>m<sup>2</sup></td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Chléb konzumní bílý</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="1" type="number" step="1" name="chleb"><button class="plus">+</button></div></td>
+        <td>Kg</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      <div class="expense">
+        <table><tr><td>Cukr krystal</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="1" type="number" step="1" name="cukr"><button class="plus">+</button></div></td>
+        <td>Kg</td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Jablka</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="1" type="number" step="1" name="jablka"><button class="plus">+</button></div></td>
+        <td>Kg</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      <div class="expense">
+        <table><tr><td>Brambory</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="2" type="number" step="1" name="brambory"><button class="plus">+</button></div></td>
+        <td>Kg</td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Vejce</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="30" type="number" step="10" name="vejce"><button class="plus">+</button></div></td>
+        <td>Ks</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      <div class="expense">
+        <table><tr><td>Šunka vepřová</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="300" type="number" step="100" name="sunka"><button class="plus">+</button></div></td>
+        <td>g</td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Máslo (250 g)</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="1" type="number" step="1" name="maslo"><button class="plus">+</button></div></td>
+        <td>Ks</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      <div class="expense">
+        <table><tr><td>Eidam</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="300" type="number" step="100" name="eidam"><button class="plus">+</button></div></td>
+        <td>g</td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Mléko polotučné</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="2" type="number" step="1" name="mleko"><button class="plus">+</button></div></td>
+        <td>l</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      <div class="expense">
+        <table><tr><td>Kuře</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="1" type="number" step="1" name="kure"><button class="plus">+</button></div></td>
+        <td>Kg</td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Černý čaj porcovaný</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="100" type="number" step="100" name="caj"><button class="plus">+</button></div></td>
+        <td>g</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      <div class="expense">
+        <table><tr><td>Čokoláda</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="100" type="number" step="100" name="cokolada"><button class="plus">+</button></div></td>
+        <td>g</td></tr></table>
+      </div>
+      <div class="expense">
+        <table><tr><td>Pivo 10 světlé lahvové</td>
+        <td><div class="qty"><button class="minus">-</button><input class="quantity" min="0" value="6" type="number" step="1" name="pivo"><button class="plus">+</button></div></td>
+        <td>Ks</td></tr></table>
+      </div>
+      <div class="cleaner"></div>
+      
+    </div>
+
+    <h2>Výsledek:</h2>
+    <div class="results">
+      <table class="result">
+        <tr>
+          <td colspan="2">1989</td>
+        </tr>
+        <tr>
+          <td>Cena nákupu:<br><span class="oPrice">0</span> Kčs</td>
+          <td>Mzda:<br><span class="oWage">0</span> Kčs</td>
+        </tr>
+        <tr>
+          <td colspan="2">Procentní podíl nákupu ze zadané mzdy:<br><span class="oPercent">0</span> %<br><br>
+            <div class="progress" style="background: #0f4a8c;">
+              <div class="oProgress">&nbsp;</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table class="result">
+        <tr>
+          <td colspan="2">2018</td>
+        </tr>
+        <tr>
+          <td>Cena nákupu:<br><span class="nPrice">0</span> Kč</td>
+          <td>Mzda:<br><span class="nWage">0</span> Kč</td>
+        </tr>
+        <tr>
+          <td colspan="2">Procentní podíl nákupu ze zadané mzdy:<br><span class="nPercent">0</span> %<br><br>
+             <div class="progress" style="background: #0f4a8c;">
+              <div class="nProgress">&nbsp;</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div class="cleaner"></div>
+    </div>
+
+    <h2>Poznámky</h2>
+      <p><em>Ceny potravin a metodika výpočtu pocházejí z původní <a href="https://zpravy.aktualne.cz/ekonomika/meli-jsme-se-za-komunistu-lepe-velke-porovnani-vydaju-cechu/r~6d90e3aef63d11e9b259ac1f6b220ee8/">kalkulačky na Aktuálně.cz</a>.</em></p>
+      <p><em>Podle webu <a href="https://www.idnes.cz/finance/banky-a-sporeni/historie-bydleni-socialismus-najem-druzstevni-byt-podnikovy-byt-sonda-odbornici.A180822_094159_sporeni_sov">iDNES.cz</a> byla v letech 1964&ndash;1989 cena nájmu 2,50&nbsp;Kčs za m<sup>2</sup>. Průměrné ceny nájmů v roce 2018 pocházejí z webu <a href="https://realitymix.cz/statistika-nemovitosti/byty-pronajem-prumerna-cena-pronajmu-1m2-mesic.html">RealityMIX.cz</a>.</em></p>
+      <p><em>V ceně za bydlení nejsou zahrnuty energie, které byly za posledních 30 let také zatíženy disproporčním nárůstem vzhledem k růstu platů.</em></p>
+
+    <div class="footer">
+      <a href="https://creativecommons.org/licenses/by-sa/3.0/cz/">CC BY-SA 3.0</a>. <a href="https://github.com/kalkulacka/kalkulacka.github.io">Zdrojový kód</a>.
+    </div>
+  </div>
+  <script>
+    /* Zdroj: https://zpravy.aktualne.cz/ekonomika/meli-jsme-se-za-komunistu-lepe-velke-porovnani-vydaju-cechu/r~6d90e3aef63d11e9b259ac1f6b220ee8/ */
+    var commodities = {
+      najem: { oPrice: 10*2.5, nPrice: 10*180.0 }, /* Nutno vynasobit stepem */
+      chleb: { oPrice: 2.8, nPrice: 24.65 },
+      cukr: { oPrice: 7.3, nPrice: 12.26 },
+      jablka: { oPrice: 7, nPrice: 26.96 },
+      brambory: { oPrice: 1.6, nPrice: 20.23 },
+      vejce: { oPrice: 13, nPrice: 36.7 },
+      sunka: { oPrice: 10, nPrice: 21.41 },
+      maslo: { oPrice: 10, nPrice: 51.19 },
+      eidam: { oPrice: 2.3, nPrice: 14.47 },
+      mleko: { oPrice: 2, nPrice: 19.67 },
+      kure: { oPrice: 30, nPrice: 67.74 },
+      caj: { oPrice: 40, nPrice: 59.84 },
+      cokolada: { oPrice: 13, nPrice: 27.20 },
+      pivo: { oPrice: 2.5, nPrice: 11.85 },
+    }
+
+    /* Zdroj: https://realitymix.cz/statistika-nemovitosti/byty-pronajem-prumerna-cena-pronajmu-1m2-mesic.html */
+    var rents = {
+      praha: 336,
+      cb: 180,
+      brno: 275,
+      kv: 178,
+      hk: 184,
+      liberec: 179,
+      ostrava: 180,
+      olomouc: 210,
+      pardubice: 169,
+      plzen: 202,
+      unl: 142,
+      jihlava: 152,
+      zlin: 207,
+    }
+
+    function csformat(val) {
+      return ("" + val).replace(".", ",");
+    }
+
+    function recalculate() {
+      var nPrice = 0;
+      var oPrice = 0;
+
+      for (item in commodities) {
+        var mult = Number($(".expense input[name='" + item + "']").val())
+        var step = Number($(".expense input[name='" + item + "']").attr("step"))
+
+        if (item == 'najem') {
+          var city = $("select[name='city']").val();
+          nPrice += mult * rents[city];
+        } else {
+          nPrice += mult * commodities[item].nPrice / step;
+        }
+        oPrice += mult * commodities[item].oPrice / step;
+      }
+
+      nPrice = Math.round(nPrice * 100) / 100;
+      oPrice = Math.round(oPrice * 100) / 100;
+      $(".nPrice").text(csformat(nPrice));
+      $(".oPrice").text(csformat(oPrice));
+
+      var nWage = Number($(".wage input[name='mzda']").val());
+      var oWage = Math.round(((9.94/100)*nWage)*100)/100;
+      $(".nWage").text(csformat(nWage));
+      $(".oWage").text(csformat(oWage));
+
+      var nPercent = (nWage > 0) ? Math.round(100 * 100 * nPrice / nWage)/100 : 0;
+      var oPercent = (oWage > 0) ? Math.round(100 * 100 * oPrice / oWage)/100 : 0;
+      $(".nPercent").text(csformat(nPercent));
+      $(".oPercent").text(csformat(oPercent));
+
+      $(".nProgress").css("width", Math.min(nPercent, 100) + "%");
+      $(".oProgress").css("width", Math.min(oPercent, 100) + "%")
+    }
+
+    $("input").change(function() {
+      recalculate();
+    });
+
+    $("select").change(function() {
+      recalculate();
+    });
+
+    $(".expense button").click(function() {
+      var input = $(this).siblings('input');
+      var mult = Number(input.val())
+      var step = Number(input.attr("step"))
+      var min = Number(input.attr("min"))
+
+      if ($(this).hasClass('plus')) {
+        mult += step;
+      } else {
+        mult -= step;
+      }
+
+      if (mult < min) {
+        mult = min;
+      }
+
+      input.val(mult);
+
+      recalculate();
+    });
+
+    recalculate();
+  </script>
+  </body>
+</html>
